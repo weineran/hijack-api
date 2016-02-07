@@ -22,7 +22,7 @@ prefix_new = '123.456.0.0/16'
 # The AS number that is making the conflicting announcement
 AS_new = 150
 
-# The path announced by AS_new
+# A list representing the path announced by AS_new, where AS_new will be the last element in the list
 AS_path_new = [5, 6, 7, 123]
 
 # The country code corresponding to AS_new
