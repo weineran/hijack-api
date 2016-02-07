@@ -23,7 +23,7 @@ prefix_new = '123.456.0.0/16'
 AS_new = 150
 
 # A list representing the path announced by AS_new, where AS_new will be the last element in the list
-AS_path_new = [5, 6, 7, 123]
+AS_path_new = [5,6,7,123]
 
 # The country code corresponding to AS_new
 country_code = 'US'
@@ -43,7 +43,7 @@ raw_data['country_code'] = country_code
 raw_data_str = json.dumps(raw_data)
 as_path_new_str = json.dumps(AS_path_new)
 
-r = requests.post("http://132.249.65.97/alert-api/", data={'is_alert': is_alert, 'data_source': data_source, 'timestamp': timestamp, \
+r = requests.post("http://169.228.188.37/alert-api/", data={'is_alert': is_alert, 'data_source': data_source, 'timestamp': timestamp, \
 	                                                       'prefix_old': prefix_old, 'AS_old': AS_old, 'prefix_new': prefix_new, 'AS_new': AS_new, \
 	                                                       'AS_path_new': as_path_new_str, 'country_code': country_code, 'raw_data': raw_data_str})
 print(r)
